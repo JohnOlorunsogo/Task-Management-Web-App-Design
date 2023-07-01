@@ -6,9 +6,11 @@ class CustomNavigationRail extends StatefulWidget {
   const CustomNavigationRail({
     super.key,
     required this.size,
+    required this.pageController,
   });
 
   final Size size;
+  final pageController;
 
   @override
   State<CustomNavigationRail> createState() => _CustomNavigationRailState();
@@ -52,6 +54,11 @@ class _CustomNavigationRailState extends State<CustomNavigationRail> {
               setState(() {
                 selectedRail = SelectedRail.dashboard;
               });
+              widget.pageController.animateToPage(
+                0,
+                duration: const Duration(milliseconds: 500),
+                curve: Curves.easeInOut,
+              );
             },
           ),
           CustomRailIcon(
@@ -62,6 +69,11 @@ class _CustomNavigationRailState extends State<CustomNavigationRail> {
               setState(() {
                 selectedRail = SelectedRail.timeline;
               });
+              widget.pageController.animateToPage(
+                1,
+                duration: const Duration(milliseconds: 500),
+                curve: Curves.easeInOut,
+              );
             },
           ),
           CustomRailIcon(
@@ -72,6 +84,11 @@ class _CustomNavigationRailState extends State<CustomNavigationRail> {
               setState(() {
                 selectedRail = SelectedRail.task;
               });
+              widget.pageController.animateToPage(
+                2,
+                duration: const Duration(milliseconds: 500),
+                curve: Curves.easeInOut,
+              );
             },
           ),
           CustomRailIcon(
@@ -82,6 +99,11 @@ class _CustomNavigationRailState extends State<CustomNavigationRail> {
               setState(() {
                 selectedRail = SelectedRail.setting;
               });
+              widget.pageController.animateToPage(
+                3,
+                duration: const Duration(milliseconds: 500),
+                curve: Curves.easeInOut,
+              );
             },
           ),
           CustomRailIcon(
@@ -92,6 +114,11 @@ class _CustomNavigationRailState extends State<CustomNavigationRail> {
               setState(() {
                 selectedRail = SelectedRail.messages;
               });
+              widget.pageController.animateToPage(
+                4,
+                duration: const Duration(milliseconds: 500),
+                curve: Curves.easeInOut,
+              );
             },
           ),
           CustomRailIcon(
@@ -102,6 +129,11 @@ class _CustomNavigationRailState extends State<CustomNavigationRail> {
               setState(() {
                 selectedRail = SelectedRail.files;
               });
+              widget.pageController.animateToPage(
+                5,
+                duration: const Duration(milliseconds: 500),
+                curve: Curves.elasticOut,
+              );
             },
           ),
           const Spacer()

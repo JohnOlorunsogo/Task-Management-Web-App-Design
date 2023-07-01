@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CustomRailIcon extends StatelessWidget {
-  const CustomRailIcon({
+  CustomRailIcon({
     required this.icon,
     required this.onTap,
     required this.name,
     required this.selectedRail,
     super.key,
   });
-  final SelectedRail selectedRail;
+  SelectedRail selectedRail;
   final String icon;
-  final VoidCallback onTap;
+  VoidCallback onTap;
   final String name;
 
   @override
