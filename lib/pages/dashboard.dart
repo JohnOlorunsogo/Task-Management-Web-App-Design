@@ -254,25 +254,43 @@ class DashboardPage extends StatelessWidget {
                         ),
                       ],
                     ),
+                    SizedBox(height: size.width * 0.024),
                     Container(
-                      width: double.maxFinite,
-                      height: size.width * 0.047,
-                      decoration: ShapeDecoration(
-                        color: const Color(0xFF5051F9),
-                        shape: RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.circular(size.width * 0.007),
+                        width: double.maxFinite,
+                        height: size.width * 0.047,
+                        decoration: ShapeDecoration(
+                          color: const Color(0xFF5051F9),
+                          shape: RoundedRectangleBorder(
+                            borderRadius:
+                                BorderRadius.circular(size.width * 0.007),
+                          ),
+                          shadows: [
+                            BoxShadow(
+                              color: const Color(0x3D4F50F9),
+                              blurRadius: size.width * 0.014,
+                              offset: Offset(0, size.width * 0.006),
+                              spreadRadius: 0,
+                            )
+                          ],
                         ),
-                        shadows: [
-                          BoxShadow(
-                            color: const Color(0x3D4F50F9),
-                            blurRadius: size.width * 0.014,
-                            offset: Offset(0, size.width * 0.006),
-                            spreadRadius: 0,
-                          )
-                        ],
-                      ),
-                    )
+                        child: const Row(
+                          children: [],
+                        )),
+                    SizedBox(height: size.width * 0.01),
+                    const Divider(color: Color(0xFFE6E6FF)),
+                    SizedBox(height: size.width * 0.01),
+                    Row(
+                      children: [
+                        Text(
+                          "Messages",
+                          style: GoogleFonts.dmSans(
+                            color: const Color(0xFF232360),
+                            fontWeight: FontWeight.w700,
+                            fontSize: size.width * 0.0139,
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
