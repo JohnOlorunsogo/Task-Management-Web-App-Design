@@ -148,6 +148,134 @@ class DashboardPage extends StatelessWidget {
               width: size.width * 0.275,
               height: size.height - (size.width * 0.053),
               decoration: const BoxDecoration(color: Colors.white),
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: size.width * 0.025,
+                  vertical: size.width * 0.015,
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Today’s Scheudle',
+                          style: GoogleFonts.dmSans(
+                            color: const Color(0xFF232360),
+                            fontWeight: FontWeight.w700,
+                            fontSize: size.width * 0.0139,
+                          ),
+                        ),
+                        // SizedBox(width: size.width * 0.0458),
+                        Container(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: size.width * 0.01,
+                            vertical: size.width * 0.008,
+                          ),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFF4F4F4),
+                            borderRadius: BorderRadius.circular(
+                              size.width * 0.02,
+                            ),
+                          ),
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.grid_view_rounded,
+                                size: size.width * 0.017,
+                                color: const Color(0xffC8CCD7),
+                              ),
+                              SizedBox(width: size.width * 0.012),
+                              Icon(
+                                Icons.calendar_month_outlined,
+                                size: size.width * 0.017,
+                                color: const Color(0xff768396),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(height: size.width * 0.02),
+                    Row(
+                      children: [
+                        Text(
+                          '30 minute call with Client',
+                          style: GoogleFonts.dmSans(
+                            color: const Color(0xFF1EA7FF),
+                            fontWeight: FontWeight.w500,
+                            fontSize: size.width * 0.008,
+                          ),
+                        ),
+                        const Spacer(),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        const Spacer(),
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            maximumSize: Size(
+                              size.width * 0.04,
+                              size.width * 0.01,
+                            ),
+                            minimumSize: Size(
+                              size.width * 0.04,
+                              size.width * 0.01,
+                            ),
+                            fixedSize: Size(
+                              size.width * 0.04,
+                              size.width * 0.01,
+                            ),
+                            padding: EdgeInsets.zero,
+                            backgroundColor: Colors.transparent,
+                          ),
+                          onPressed: () {},
+                          child: Text(
+                            '+ invite',
+                            style: GoogleFonts.dmSans(
+                              color: const Color(0xFF1EA7FF),
+                              fontWeight: FontWeight.w500,
+                              fontSize: size.width * 0.009,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          'Project Discovery Call',
+                          style: GoogleFonts.dmSans(
+                            color: const Color(0xFF232360),
+                            fontWeight: FontWeight.w500,
+                            fontSize: size.width * 0.0125,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Container(
+                      width: double.maxFinite,
+                      height: size.width * 0.047,
+                      decoration: ShapeDecoration(
+                        color: const Color(0xFF5051F9),
+                        shape: RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.circular(size.width * 0.007),
+                        ),
+                        shadows: [
+                          BoxShadow(
+                            color: const Color(0x3D4F50F9),
+                            blurRadius: size.width * 0.014,
+                            offset: Offset(0, size.width * 0.006),
+                            spreadRadius: 0,
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
             )
           ],
         )
